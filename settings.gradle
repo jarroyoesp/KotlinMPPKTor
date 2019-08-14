@@ -1,6 +1,6 @@
 include ':app'
 include ':JsApp'
-include ':backend'
+include ':BackEnd'
 include ":SharedCode"
 
 // Deshabilitar para Android / Habilitar para iOS
