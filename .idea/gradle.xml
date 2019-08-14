@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/AndroidApp" />
             <option value="$PROJECT_DIR$/Backend" />
+            <option value="$PROJECT_DIR$/JavaFxApp" />
             <option value="$PROJECT_DIR$/JsApp" />
             <option value="$PROJECT_DIR$/SharedCode" />
           </set>

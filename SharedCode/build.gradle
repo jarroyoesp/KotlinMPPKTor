@@ -2,9 +2,31 @@ apply plugin: 'org.jetbrains.kotlin.multiplatform'
 
 apply plugin: 'kotlinx-serialization'
 
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    // By default the android gradle plugin expects to find the kotlin source files in
+    // the folder `main` and the test in the folder `test`. This is to be able place
+    // the source code files inside androidMain and androidTest folders
+    sourceSets {
+        main {
+            manifest.srcFile 'src/androidMain/AndroidManifest.xml'
+            java.srcDirs = ['src/androidMain/kotlin']
+            res.srcDirs = ['src/androidMain/res']
+        }
+        test {
+            java.srcDirs = ['src/androidTest/kotlin']
+            res.srcDirs = ['src/androidTest/res']
+        }
+    }
+}
+
+
 kotlin {
     targets {
-        //jvm()
+        jvm ()
 
         // iPhone simulator    : presets.iosX64
         // real iDevice 32 bit : presets.iosArm32
@@ -26,7 +48,7 @@ kotlin {
        //    }
        //}
 
-       fromPreset(presets.jvm, 'android')
+       fromPreset(presets.android, 'android')
 
         fromPreset(presets.js, "js") {
             compileKotlinJs {
@@ -94,6 +116,7 @@ kotlin {
 
             // COROUTINE
             implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
             // SERIALIZATION
             implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serializer_version"
