@@ -1,4 +1,4 @@
-package org.example.kotlin.multiplatform.backend
+package com.jarroyo.backend
 
 import freemarker.cache.ClassTemplateLoader
 import io.ktor.application.Application

@@ -1,4 +1,4 @@
-package org.example.kotlin.multiplatform.backend
+package com.jarroyo.backend
 
 import io.ktor.http.ContentType
 import io.ktor.http.content.defaultResource
