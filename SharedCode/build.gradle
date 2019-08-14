@@ -4,7 +4,7 @@ apply plugin: 'kotlinx-serialization'
 
 kotlin {
     targets {
-        jvm()
+        //jvm()
 
         // iPhone simulator    : presets.iosX64
         // real iDevice 32 bit : presets.iosArm32
@@ -26,7 +26,7 @@ kotlin {
        //    }
        //}
 
-       //fromPreset(presets.jvm, 'android')
+       fromPreset(presets.jvm, 'android')
 
         fromPreset(presets.js, "js") {
             compileKotlinJs {
