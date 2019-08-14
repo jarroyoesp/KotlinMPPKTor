@@ -8,3 +8,8 @@ Execute JsApp:
 ./gradlew BackEnd:run
 --> localhost:8082
 ````
+
+Execute JavaFxApp:
+```
+./gradlew JavaFxApp:run
+```
